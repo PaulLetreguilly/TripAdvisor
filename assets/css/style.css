@@ -21,6 +21,9 @@ header {
   display: flex;
   justify-content: space-between;
 }
+.hide {
+  display: none;
+}
 header nav {
   display: flex;
   align-items: center;
@@ -66,8 +69,9 @@ h2 {
   font-family: "Trip Sans Med", sans-serif;
 }
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 h4:hover {
   text-decoration: underline;
@@ -140,6 +144,14 @@ main nav {
 }
 .under-pic {
   font-size: 12px;
+  padding-top: 15px;
+}
+.under-pic span:hover {
+  text-decoration: underline;
+}
+.under-pic .visit-Paris {
+  margin-left: 80vw;
+  text-decoration: none !important;
 }
 
 .under-h2 {
@@ -185,12 +197,12 @@ main section {
 }
 
 .nexttocarr a {
-  text-decoration: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: underline;
+  font-family: inherit;
   color: #000;
 }
 .nexttocarr a:hover {
-  text-decoration: underline;
+  color: rgb(83, 83, 83);
 }
 .carrousel img {
   width: 270px;
@@ -241,6 +253,18 @@ main section {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.mini-yellow {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 155px;
+  left: 10px;
+  background-color: #f1b202;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .carrousel span .fas {
   color: #03aa6c;
 }
@@ -272,6 +296,22 @@ footer {
   background-color: #f9f1ec;
   height: 150px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 /* ***********************************************
@@ -312,6 +352,7 @@ footer {
   }
   .menu {
     flex-wrap: wrap;
+    /* background-color: pink; */
   }
   .menu a {
     width: calc((100%) / 6);
@@ -335,7 +376,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .container:not(.pictures) {
+  .container {
     padding-left: 10px;
   }
   header nav .hidden {
@@ -349,24 +390,65 @@ footer {
   }
   .menu a {
     flex-shrink: 0;
+    height: 25px;
+    width: 150px;
+  }
+  .menu a:nth-child(2) {
+    width: 230px;
   }
   .menu::-webkit-scrollbar {
-    /*  Google, Safari & Opéra   */
+    /* Google, Safari & Opéra   */
     display: none;
   }
   .menu {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /*  Firefox */
+    /* -ms-overflow-style: none; IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
   main section {
     flex-direction: column;
-    /* padding-left: 10px; */
+    padding-left: 10px;
   }
   .nexttocarr {
     width: 100%;
+    margin-bottom: 10px;
+  }
+  .pictures {
+    height: 275px;
   }
   .pictures .col-2 {
     width: 0;
     height: 0;
   }
+  h1 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .hidden-header {
+    display: none;
+    padding: 0 30px;
+  }
+  header img {
+    width: 150px;
+    align-items: center;
+  }
+  header .hide {
+    display: inherit;
+    text-decoration: none;
+    color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  header .container {
+    padding: 10px 10px 0 10px;
+    display: flex;
+  }
+  .under-pic {
+    display: none;
+  }
 }
+
+/* <i class="fas fa-search"></i> */
+/* <i class="fas fa-bars"></i> */
