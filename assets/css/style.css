@@ -73,6 +73,11 @@ h3 {
   margin-bottom: 20px;
   font-weight: bold;
 }
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0;
+}
 h4:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -150,7 +155,7 @@ main nav {
   text-decoration: underline;
 }
 .under-pic .visit-Paris {
-  margin-left: 80vw;
+  margin-left: 85vw;
   text-decoration: none !important;
 }
 
@@ -287,6 +292,61 @@ main section {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 } /* Firefox */
+
+.container .carr2 {
+  width: 100%;
+  margin: 5px 0px;
+  margin-right: 10px;
+  display: flex;
+}
+.carr2 div {
+  width: calc((100% -20px) / 3);
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.carr2 div:not(:last-child) {
+  margin-right: 5px;
+}
+.carr2 img {
+  height: 260px;
+  object-fit: cover;
+}
+.carr2 img:hover {
+  opacity: 0.8;
+}
+.appart {
+  position: relative;
+  display: flex;
+}
+.appart .circle2 {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle2:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.bold {
+  font-weight: bold;
+}
+.carr2 .fa-circle {
+  color: #03aa6c;
+}
+.carr2 p {
+  margin: 5px 0;
+}
 
 /* ///////////////////////////////// */
 /* ///////////  FOOTER  //////////// */
