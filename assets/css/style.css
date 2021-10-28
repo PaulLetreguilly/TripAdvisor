@@ -10,9 +10,9 @@ body {
   font-family: "Trip Sans Reg", Arial, sans-serif;
 }
 
-/* ///////////////////////// */
-/* //////  HEADER ////////// */
-/* ///////////////////////// */
+/* ///////////////////////////////// */
+/* //////////  HEADER ////////////// */
+/* ///////////////////////////////// */
 
 header img {
   width: 200px;
@@ -74,9 +74,9 @@ h4:hover {
   cursor: pointer;
 }
 
-/* ///////////////////////// */
-/* ///////   MAIN  ///////// */
-/* ///////////////////////// */
+/* ///////////////////////////////// */
+/* ///////////   MAIN  ///////////// */
+/* ///////////////////////////////// */
 
 h1 span {
   color: #fe5d5d;
@@ -89,11 +89,10 @@ main nav {
 .menu a {
   border: solid 2px;
   border-radius: 10px;
-  /* flex: 1; */
+  width: calc((100% - 100px) / 6);
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap;
 }
 .menu a:not(:last-child) {
   margin-right: 20px;
@@ -104,12 +103,12 @@ main nav {
   cursor: pointer;
 }
 
-/* ///////  responsive ////////// */
+/* ///////////  responsive ////////////// */
 
 .menu .hidden-menu {
   display: none;
 }
-/* ///////////////////////////// */
+/* ///////////////////////////////////// */
 .pictures {
   height: 430px;
   width: 100%;
@@ -155,7 +154,7 @@ main nav {
 
 main section {
   width: 100%;
-  height: 280px;
+  /* height: 280px; */
   display: flex;
   overflow: scroll;
 }
@@ -168,7 +167,6 @@ main section {
 }
 .carrousel {
   width: calc((100% - 4px) / 3);
-  /* height: 280px; */
   display: flex;
   flex-wrap: nowrap;
   flex-shrink: 0;
@@ -226,11 +224,7 @@ main section {
   align-items: center;
   justify-content: center;
 }
-/* .circle .far {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-} */
+
 .circle:hover {
   background-color: #f2f2f2;
   cursor: pointer;
@@ -270,9 +264,9 @@ main section {
   scrollbar-width: none;
 } /* Firefox */
 
-/* ///////////////////////// */
-/* ///////  FOOTER  //////// */
-/* ///////////////////////// */
+/* ///////////////////////////////// */
+/* ///////////  FOOTER  //////////// */
+/* ///////////////////////////////// */
 
 footer {
   background-color: #f9f1ec;
@@ -284,14 +278,21 @@ footer {
 ***********    TripAdvisor - Partie 3 *************
  ******************************************* ***/
 
-@media (max-width: 1184px) {
+@media (max-width: 1184px) and (min-width: 769px) {
+  .container {
+    padding-left: 10px;
+  }
   .menu .hidden-menu {
     display: inherit;
   }
-  .menu a {
-    flex: 0;
-    width: calc(100% / 4);
+  .menu {
     flex-wrap: wrap;
+  }
+  .menu a {
+    width: calc((100%) / 6);
+    margin-top: 10px;
+    /* flex-wrap: wrap; */
+    flex-shrink: 0;
   }
   .pictures {
     height: 370px;
@@ -302,7 +303,22 @@ footer {
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 10px;
+  }
+  .menu .hidden-menu {
+    display: inherit;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .menu a {
+    width: calc((100%) / 6);
+    margin-top: 10px;
+    /* flex-wrap: wrap; */
+    flex-shrink: 0;
+  }
   header nav .hidden {
     display: none;
   }
@@ -319,7 +335,38 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .menu a {
+  .container:not(.pictures) {
+    padding-left: 10px;
+  }
+  header nav .hidden {
+    display: none;
+  }
+  .menu .hidden-menu {
+    display: inherit;
+  }
+  .menu {
     overflow: scroll;
+  }
+  .menu a {
+    flex-shrink: 0;
+  }
+  .menu::-webkit-scrollbar {
+    /*  Google, Safari & Opéra   */
+    display: none;
+  }
+  .menu {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /*  Firefox */
+  }
+  main section {
+    flex-direction: column;
+    /* padding-left: 10px; */
+  }
+  .nexttocarr {
+    width: 100%;
+  }
+  .pictures .col-2 {
+    width: 0;
+    height: 0;
   }
 }
