@@ -18,9 +18,29 @@
       crossorigin="anonymous"
     ></script>
 
+    <!--  ***  Import JS   ***    -->
+    <script src="assets/main.js"></script>
+
+    <!-- ****** Import Axios ***** -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>myTripAdvisor</title>
   </head>
-  <body>
+  <body id="body">
+
+    <!--/////////*************--- MODAL ---*************/////////-->
+    <div id="myModal" class="modal hide-modal">
+      <form class="form" id="myForm">
+        <i class="fas fa-times" id="hidden-modal"></i>
+        <p>Formulaire de contact</p>
+        <input type="text" placeholder="Prénom" id="firstname">
+        <input type="text" placeholder="Nom" id="lastname">
+        <input type="text" placeholder="Email" id="email">
+        <textarea  id="message" placeholder="Ecrivez ici votre message..." cols="20" rows="5"></textarea>
+        <input type="submit" value="Envoyer le formulaire"/>
+      </form>
+    </div>
+    <!--/////////*************--- MODAL ---*************/////////-->
     <header class="container">
       <a class="hide" href=""><i class="fas fa-bars"></i></a>
       <img
@@ -36,7 +56,7 @@
         <div>
           <i class="far fa-bell"></i><Alertes class="hidden">Alertes</span>
         </div>
-        <button>Connectez-vous</button>
+        <button id="display">Connectez-vous</button>
       </nav>
     </header>
     <main class="container">
@@ -79,7 +99,9 @@
       <div class="under-pic"
         ><span>Europe</span> > <span>France</span> > <span>Île-de-France</span> > <span>Paris</span>
         <i class="fas fa-caret-down"></i
-      ><span class="visit-Paris">Visiter Paris</span></div>
+      >
+      <!-- <span class="visit-Paris">Visiter Paris</span> -->
+    </div>
       <h2>La Ville Lumière éblouit en tous points</h2>
       <p class="under-h2">
         Aucun autre endroit au monde ne fait autant rêver que Paris. La ville
